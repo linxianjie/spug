@@ -61,9 +61,8 @@ python manage.py user add -u admin -p 123456 -s -n 管理员
 python manage.py runserver
 #### 6. 安装前端依赖
 可以把 npm 用 yarn 或 cnpm 代替。
-
-cd /data/spug/spug_web
-npm install --registry=https://registry.npm.taobao.org
+    cd /data/spug/spug_web
+    npm install --registry=https://registry.npm.taobao.org
 #### 7. 启动前端
 npm start
 #### 8. 访问测试
