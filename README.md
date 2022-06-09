@@ -43,6 +43,40 @@ Spug是面向中小型企业设计的轻量级无Agent的自动化运维平台�
 
 更多使用帮助请参考 [使用文档](https://spug.cc/docs/host-manage/)。
 
+#### 1. Clone项目代码
+git clone https://github.com/openspug/spug /data/spug
+#### 2. 创建运行环境
+cd /data/spug/spug_api
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple/
+#### 3. 初始化数据库
+默认使用的 Sqlite 数据库。
+
+python manage.py updatedb
+#### 4. 创建默认管理员账户
+python manage.py user add -u admin -p 123456 -s -n 管理员
+
+# -u 用户名
+# -p 密码
+# -s 超级管理员
+# -n 用户昵称
+#### 5. 启动 api 开发环境服务
+python manage.py runserver
+#### 6. 安装前端依赖
+可以把 npm 用 yarn 或 cnpm 代替。
+
+cd /data/spug/spug_web
+npm install --registry=https://registry.npm.taobao.org
+#### 7. 启动前端
+npm start
+#### 8. 访问测试
+正常情况下 npm start 会自动在浏览器中打开项目，如果未打开可以在浏览器中输入 http://localhost:3000 访问。
+如果你按照上边的文档执行的话，在第 4 步创建了默认的管理员账户：
+
+用户名：admin  
+密码：123456
+
 ## 推荐项目
 [Yearning — MYSQL 开源SQL语句审核平台](https://github.com/cookieY/Yearning)
 
