@@ -57,10 +57,6 @@ python manage.py updatedb
 #### 4. 创建默认管理员账户
 python manage.py user add -u admin -p 123456 -s -n 管理员
 
-# -u 用户名
-# -p 密码
-# -s 超级管理员
-# -n 用户昵称
 #### 5. 启动 api 开发环境服务
 python manage.py runserver
 #### 6. 安装前端依赖
