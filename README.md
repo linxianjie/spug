@@ -40,6 +40,8 @@ Spug是面向中小型企业设计的轻量级无Agent的自动化运维平台�
 ## 安装
 
 [官方文档](https://spug.cc/docs/install/)
+#### 1. Clone项目代码
+git clone https://github.com/openspug/spug /data/spug
 
 更多使用帮助请参考 [使用文档](https://spug.cc/docs/host-manage/)。
 
